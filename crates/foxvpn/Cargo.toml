@@ -1,0 +1,51 @@
+[package]
+name = "foxvpn"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "SSH VPN engine: capture traffic on a virtual interface and forward it through SSH"
+publish = false
+
+[lib]
+name = "foxvpn"
+path = "src/lib.rs"
+
+[[bin]]
+name = "fox-cli"
+path = "src/bin/fox-cli.rs"
+
+[[bin]]
+name = "fox-vpnd"
+path = "src/bin/fox-vpnd.rs"
+
+[dependencies]
+anyhow.workspace = true
+base64.workspace = true
+bytes.workspace = true
+clap.workspace = true
+dirs.workspace = true
+getrandom = "0.2"
+ipnet.workspace = true
+ipstack.workspace = true
+keyring.workspace = true
+libc.workspace = true
+log = "0.4"
+tracing-log = "0.2"
+reqwest.workspace = true
+russh.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+socket2.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+tun.workspace = true
+zeroize.workspace = true
+
+[dev-dependencies]
+rand = "0.10"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_Security", "Win32_System_Threading"] }

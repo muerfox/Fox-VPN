@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fox_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/fox_cream"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SSH tunnel"
+                    android:textColor="@color/fox_muted"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Disconnected"
+                    android:textColor="@color/fox_muted"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_server"
+                android:gravity="center_vertical"
+                android:text="Server"
+                android:textColor="@color/fox_cream"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_field"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_server"
+                android:hint="SSH server"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="@color/fox_cream"
+                android:textColorHint="@color/fox_hint" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/port"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_field"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_route"
+                    android:hint="Port"
+                    android:inputType="number"
+                    android:padding="14dp"
+                    android:textColor="@color/fox_cream"
+                    android:textColorHint="@color/fox_hint" />
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:background="@drawable/bg_field"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_user"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:padding="14dp"
+                    android:textColor="@color/fox_cream"
+                    android:textColorHint="@color/fox_hint" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_field"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_lock"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:textColor="@color/fox_cream"
+                android:textColorHint="@color/fox_hint" />
+
+            <EditText
+                android:id="@+id/key_path"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_field"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_key"
+                android:hint="Private key path (optional)"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="@color/fox_cream"
+                android:textColorHint="@color/fox_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <CheckBox
+                android:id="@+id/full_tunnel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full tunnel"
+                android:textColor="@color/fox_cream" />
+
+            <CheckBox
+                android:id="@+id/tunnel_dns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DNS through the tunnel"
+                android:textColor="@color/fox_cream" />
+
+            <CheckBox
+                android:id="@+id/remember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Remember the password in the Android keystore"
+                android:textColor="@color/fox_cream" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/fox_orange"
+            android:text="Connect"
+            android:textAllCaps="false"
+            android:textColor="@color/fox_ink"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_log"
+                android:gravity="center_vertical"
+                android:text="Activity"
+                android:textColor="@color/fox_cream"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/logs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_log"
+                android:minHeight="120dp"
+                android:padding="12dp"
+                android:textColor="@color/fox_muted"
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                android:typeface="monospace" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

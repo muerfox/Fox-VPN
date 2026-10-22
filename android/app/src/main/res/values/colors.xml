@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fox_orange">#FF7A18</color>
+    <color name="fox_orange_deep">#C45A10</color>
+    <color name="fox_amber">#FF7A18</color>
+    <color name="fox_ink">#141414</color>
+    <color name="fox_bg">#101010</color>
+    <color name="fox_card">#1A1A1A</color>
+    <color name="fox_header">#161616</color>
+    <color name="fox_cream">#F2F2F2</color>
+    <color name="fox_muted">#9A9A9A</color>
+    <color name="fox_hint">#6A6A6A</color>
+    <color name="fox_field">#121212</color>
+    <color name="fox_line">#2A2A2A</color>
+    <color name="fox_icon_bg">#101010</color>
+    <color name="fox_green">#8DDC78</color>
+    <color name="fox_red">#FF8A70</color>
+</resources>

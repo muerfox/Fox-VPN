@@ -1,0 +1,15 @@
+<resources>
+    <style name="Theme.FoxVpn" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/fox_cream</item>
+        <item name="colorPrimaryVariant">@color/fox_card</item>
+        <item name="colorOnPrimary">@color/fox_ink</item>
+        <item name="colorSecondary">@color/fox_muted</item>
+        <item name="colorControlActivated">@color/fox_orange</item>
+        <item name="android:statusBarColor">@color/fox_header</item>
+        <item name="android:navigationBarColor">@color/fox_bg</item>
+        <item name="android:windowBackground">@color/fox_bg</item>
+        <item name="android:textColorPrimary">@color/fox_cream</item>
+        <item name="android:textColorHint">@color/fox_hint</item>
+        <item name="android:colorAccent">@color/fox_orange</item>
+    </style>
+</resources>

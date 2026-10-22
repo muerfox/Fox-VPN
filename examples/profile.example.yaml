@@ -1,0 +1,26 @@
+# Example profile. Secrets are not stored here.
+# Put the password or key passphrase in the system keyring from the application,
+# or pass FOX_VPN_PASSWORD / FOX_VPN_PASSPHRASE to fox-cli.
+profile:
+  name: My SSH VPN
+  host: 78.39.47.49
+  port: 2222
+  username: root
+  authentication: private_key
+  key_path: /home/you/.ssh/id_ed25519
+  routing_mode: full_tunnel
+  auto_networks: true
+  tunnel_dns: true
+  dns_servers:
+    - 1.1.1.1
+    - 8.8.8.8
+  ipv4: true
+  ipv6: false
+  reconnect: true
+  verbose_logging: true
+  connect_timeout_secs: 20
+  keepalive_secs: 15
+  kill_switch: false
+  exclude_lan: false
+  transport: ssh_direct
+  mtu: 1500
